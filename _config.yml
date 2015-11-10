@@ -6,3 +6,7 @@ url:            http://itsuku.github.io
 
 permalink:      none
 markdown:       kramdown
+author:
+  name:         epkq
+  url:          //example.com
+  email:        have_not@had.com
