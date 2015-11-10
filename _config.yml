@@ -1,0 +1,8 @@
+title:          tpkq
+description:    my secret notes
+
+baseurl:        ""
+url:            http://itsuku.github.io
+
+permalink:      none
+markdown:       kramdown
