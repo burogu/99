@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}Home - {{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ page.description }}">
+    
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    
+    <link rel="stylesheet" href="/public/style.css">
+    <script src="/public/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="site-head">
+        <p>
+          <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        </p>
+        <p class='site-description'>{{ site.description }}</p>
+      </div>
+      <div class="post">
+        <h1 class="post-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+        <span class="post-author">{% if page.author %}{{ page.author }}{% endif %}</span>
+        <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+        <span class="post-meta">{% if page.meta %}{{ page.meta }}{% endif %}</span>
+        <div class="post-content">{{ content }}</div>
+      </div>
+      <div class="site-foot">
+        &copy; 2015 <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>. All rights reserved.
+      </div>
+    </div>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
